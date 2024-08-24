@@ -4,25 +4,31 @@ import Card from "@/components/card/Card";
 import CardTitle from "@/components/card/CardTitle";
 import SendIcon from "@/components/icons/SendIcon";
 import Button from "@/components/ui/Button";
+import Input from "@/components/ui/Input";
 import TextArea from "@/components/ui/TextArea";
 import { montserrat } from "@/theme/fonts";
 import { useState } from "react";
 
-const Feedback = () => {
-    const [ feedback, setFeedback ] = useState('');
-
+const DiscussionCreate = () => {
+    const [ title, setTitle ] = useState('');
+    const [ content, setContent ] = useState('');
     return (
         <div className="mb-20">
             <Card>
                 <div className={`flex flex-col gap-6 pb-10 ${montserrat.className}`}>
                     <CardTitle 
-                        title="Feedback"
+                        title="Create Discussion"
                         icon={<span className="text-secondary">#</span>}
                     />
+                    <Input 
+                        value={title}
+                        placeholder="Title..."
+                        onChange={(val) => setTitle(val)}
+                    />
                     <TextArea 
-                        value={feedback}
-                        placeholder="Type your feedback here..."
-                        onChange={(val) => setFeedback(val)}
+                        value={content}
+                        placeholder="Content..."
+                        onChange={(val) => setContent(val)}
                     />
                     <div className="w-1/6">
                         <Button 
@@ -37,4 +43,4 @@ const Feedback = () => {
     );
 }
 
-export default Feedback;
+export default DiscussionCreate;

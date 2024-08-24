@@ -24,7 +24,8 @@ const config: Config = {
         'primary': '#242E59',
         'secondary': '#F5CA25',
         'muted': '#D9D9D9',
-        'paragraph': '#808080'
+        'paragraph': '#808080',
+        'primary-input': '#DFDBCA'
       },
     },
   },

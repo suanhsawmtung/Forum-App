@@ -61,14 +61,20 @@ const SideNav = () => {
                 </ul>
             </div>
 
-            <button
-                className="border-2 border-secondary rounded-3xl w-full h-9 text-center"
+            <Link
+                href="/discussions/create"
+                className="w-full"
             >
-                <div className="flex justify-center items-center gap-2 text-xs font-bold text-secondary">
-                    <PlusIcon />
-                    New Discussion
-                </div>
-            </button>
+                <button
+                    type="button"
+                    className="border-2 border-secondary rounded-3xl w-full h-9 text-center"
+                >
+                    <div className="flex justify-center items-center gap-2 text-xs font-bold text-secondary">
+                        <PlusIcon />
+                        New Discussion
+                    </div>
+                </button>
+            </Link>
         </div>
     );
 }
